@@ -10,14 +10,14 @@ In This project requires I created an asynchronous web app that uses data from a
     * npm install  body-parser
 
 - Require dependencies in server.js.
- * const express = require("express");
+  * const express = require("express");
 
 - Start an instance of express.
- * const myapp = express();
+  * const myapp = express();
 
 - Configure express to use cors.
- * const cors = require("cors");
- * myapp.use(cors());
+  * const cors = require("cors");
+  * myapp.use(cors());
 
 - Configure bodyParser as middle-ware
   * const body_parser = require("body-parser");
