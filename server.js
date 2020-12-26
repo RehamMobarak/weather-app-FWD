@@ -45,8 +45,8 @@ function addData(request, response) {
 
   //defining get data url
   myapp.get("/myData", getmyData);
-function getmyData(req, res) {
-  res.send(myData);
+function getmyData(request, response) {
+  response.send(myData);
   console.log(myData);
 }
 
