@@ -81,6 +81,12 @@ const update = async () => {
 
       const UIfeel = document.getElementById("content");
       UIfeel.innerHTML = "feeling: " + result.userContent;
+
+      //emptying inputs after submit
+      document.getElementById("zip").value ="";
+
+      document.getElementById("feelings").value ="";
+
     } catch (error) {
       console.log("Sorry, it's an error..!", error);
     }
