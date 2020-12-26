@@ -19,7 +19,7 @@ const getData = async (apiUrl, zCode, k) => {
     const response = await fetch(apiUrl + zCode + k);
     try {
       const fetchedData = await response.json();
-    //   console.log(fetchedData);
+      console.log(fetchedData);
       return fetchedData;
     } catch (error) {
       console.log("Sorry, there is an error..!", error);
@@ -39,6 +39,8 @@ function generateButton(e) {
         temperature: fetchedData.main.temp,
         date: currentDate,
         userContent: userFeelings,
+        name: fetchedData.name,
+        windSpeed: fetchedData.wind.speed,
       }).then(() => {
         update();
       });
@@ -77,10 +79,16 @@ const update = async () => {
       UIdate.innerHTML = "Date: " + result.date;
 
       const UItemp = document.getElementById("temp");
-      UItemp.innerHTML = "temperature: " + result.temperature;
+      UItemp.innerHTML = "Temperature: " + result.temperature;
 
       const UIfeel = document.getElementById("content");
-      UIfeel.innerHTML = "feeling: " + result.userContent;
+      UIfeel.innerHTML = "Your Feeling: " + result.userContent;
+
+      const UIcityName = document.getElementById("cityName");
+      UIcityName.innerHTML = "City Name: " + result.name;
+
+      const UIwindSpeed = document.getElementById("windSpeed");
+      UIwindSpeed.innerHTML = "Wind Speed: " + result.windSpeed;
 
       //emptying inputs after submit
       document.getElementById("zip").value ="";

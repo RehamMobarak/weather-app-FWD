@@ -38,6 +38,8 @@ function addData(request, response) {
   myData["date"] = request.body.date;
   myData["temperature"] = request.body.temperature;
   myData["userContent"] = request.body.userContent;
+  myData["name"] = request.body.name;
+  myData["windSpeed"] = request.body.windSpeed;
 
   response.send(myData);
   console.log(myData);
