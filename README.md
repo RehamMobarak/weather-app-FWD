@@ -1,7 +1,7 @@
 # Weather-Journal App Project
 
 ## Overview
-In This project requires I created an asynchronous web app that uses data from a Web API and user input data to dynamically update the User interface with city's weather data.
+In This project requires I created an asynchronous web app using javascript that uses data from a Web API and user input data to dynamically update the User interface with city's weather data.
 
 ## Instructions
 - First, you must install dependencies (expressjs, cors, body-parser).
