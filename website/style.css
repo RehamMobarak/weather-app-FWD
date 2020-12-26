@@ -27,6 +27,7 @@ body{
 .title{
     font-weight:bold;
     text-decoration: underline;
+    padding-top: 10px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -49,6 +50,10 @@ input{
 
 input#feelings{
     display: inline;
+}
+
+input::placeholder{
+    padding-left: 10px;
 }
 
 button{

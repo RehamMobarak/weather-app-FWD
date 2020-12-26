@@ -37,13 +37,17 @@ const getData = async (apiUrl, zCode, k) => {
 function generateButton(e) {
   const zCode = document.getElementById("zip").value;
   const userFeelings = document.getElementById("feelings").value;
+  // check if zip code is empty
   if (zCode == "") {
     alert("YOU MUST ENTER ZIPCODE!");
   }
 
+  // check if  user Feelings is empty
   if (userFeelings == "") {
     alert("YOU MUST ENTER FEELINGS!");
   }
+
+  // if zip code and feelings are not empty -> get the data from the api
   if (zCode && userFeelings !== "") {
     getData(apiUrl, zCode, k).then((fetchedData) => {
       dataPOST("/addProjectData", {
