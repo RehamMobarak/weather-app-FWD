@@ -10,9 +10,28 @@ In This project requires I created an asynchronous web app that uses data from a
     * npm install  body-parser
 
 - Require dependencies in server.js.
+ * const express = require("express");
+
 - Start an instance of express.
+ * const myapp = express();
+
 - Configure express to use cors.
+* const cors = require("cors");
+ * myapp.use(cors());
+
+- Configure bodyParser as middle-ware
+* const body_parser = require("body-parser");
+  * myapp.use(body_parser.urlencoded({ extended: false }));
+  * myapp.use(body_parser.json());
+
+- Define project folder name
+ * myapp.use(express.static("your-project-folder-name"));
+
 - Server setup (port, listen to port) from terminal.
+ * const port = 5000;
+ * const server = myapp.listen(port, () => {
+  console.log(`running on localhost: ${port}`);
+});
 - To run the server In terminal write ' node server.js '
 - In browser write localhost:portnumber (replace port number with the port number you wrote in server.js)
 
