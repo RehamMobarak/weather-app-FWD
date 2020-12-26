@@ -26,9 +26,22 @@ const server = myapp.listen(port, () => {
 });
 
 //defining home page url
-myapp.get("/", function (req, res) {
-    res.send("index.html");
+myapp.get("/", function (request, response) {
+    response.send("index.html");
   });
+
+
+  //defining post data url
+myapp.post("/addProjectData", addData);
+
+function addData(request, response) {
+  myData["date"] = request.body.date;
+  myData["temperature"] = request.body.temperature;
+  myData["userContent"] = request.body.userContent;
+
+  response.send(myData);
+  console.log(myData);
+}
 
   //defining get data url
   myapp.get("/myData", getmyData);
