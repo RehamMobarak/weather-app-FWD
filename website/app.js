@@ -45,7 +45,27 @@ function generateButton(e) {
     });
   }
 
+//POST desired fetched data parts which we got from the api GET request with user response -feelings- input
+const dataPOST = async (url = "", feelingInput = {}) => {
+    console.log(feelingInput);
+    const res = await fetch(url, {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // Body data type must match "Content-Type" header
+      body: JSON.stringify(feelingInput),
+    });
 
+    try {
+      const newEntry = await res.json();
+      console.log(newEntry);
+      return newEntry;
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
 
 
 
