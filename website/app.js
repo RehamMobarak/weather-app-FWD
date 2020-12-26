@@ -67,5 +67,22 @@ const dataPOST = async (url = "", feelingInput = {}) => {
     }
   };
 
+//UPDATE the page with the new data that includes fetched data from the api - temp - and user input - feelings - and date -generated instantly-
+const update = async () => {
+    const request = await fetch("/myData");
+    try {
+      const result = await request.json();
+      console.log(result);
+      const UIdate = document.getElementById("date");
+      UIdate.innerHTML = "Date: " + result.date;
 
+      const UItemp = document.getElementById("temp");
+      UItemp.innerHTML = "temperature: " + result.temperature;
+
+      const UIfeel = document.getElementById("content");
+      UIfeel.innerHTML = "feeling: " + result.userContent;
+    } catch (error) {
+      console.log("Sorry, it's an error..!", error);
+    }
+  };
 
