@@ -6,7 +6,7 @@ body{
 #app{
     display: grid;
     /* grid-auto-rows: minmax(150px, auto); */
-    height:100vh;
+    height:97vh;
     background: #5663db;
     color: #1c0b7e;
     justify-content: center;
@@ -14,14 +14,19 @@ body{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-.holder{
-
+.headline{
+    font-size: x-large;
+    font-weight:bold;
+    padding-top: 30px;
 }
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    height: 165px;
+}
+
+.title{
+    font-weight:bold;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -39,6 +44,11 @@ input{
     font-size: 20px;
     font-family:Arial, Helvetica, sans-serif;
     border: none;
+    border-radius: 10px;
+}
+
+input#feelings{
+    display: inline;
 }
 
 button{
@@ -61,12 +71,6 @@ h1{
     font-size: 36px;
 }
 
-textarea{
-    background:#22b2da;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -77,6 +81,7 @@ button:focus {
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */
     color: #ffffff;
+    font-size: small;
     font-family: Arial, Helvetica, sans-serif
 
 }
@@ -90,5 +95,8 @@ button:focus {
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
+}
 
+#entryHolder > p:last-child{
+    margin-bottom: 0px;
 }
