@@ -19,7 +19,7 @@ const getData = async (apiUrl, zCode, k) => {
     const response = await fetch(apiUrl + zCode + k);
     try {
       const fetchedData = await response.json();
-      console.log(fetchedData);
+    //   console.log(fetchedData);
       return fetchedData;
     } catch (error) {
       console.log("Sorry, there is an error..!", error);
@@ -47,7 +47,7 @@ function generateButton(e) {
 
 //POST desired fetched data parts which we got from the api GET request with user response -feelings- input
 const dataPOST = async (url = "", feelingInput = {}) => {
-    console.log(feelingInput);
+    // console.log(feelingInput);
     const res = await fetch(url, {
       method: "POST",
       credentials: "same-origin",
@@ -60,7 +60,7 @@ const dataPOST = async (url = "", feelingInput = {}) => {
 
     try {
       const newEntry = await res.json();
-      console.log(newEntry);
+    //   console.log(newEntry);
       return newEntry;
     } catch (error) {
       console.log("error", error);
@@ -72,7 +72,7 @@ const update = async () => {
     const request = await fetch("/myData");
     try {
       const result = await request.json();
-      console.log(result);
+    //   console.log(result);
       const UIdate = document.getElementById("date");
       UIdate.innerHTML = "Date: " + result.date;
 
