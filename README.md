@@ -16,11 +16,11 @@ In This project requires I created an asynchronous web app that uses data from a
  * const myapp = express();
 
 - Configure express to use cors.
-* const cors = require("cors");
+ * const cors = require("cors");
  * myapp.use(cors());
 
 - Configure bodyParser as middle-ware
-* const body_parser = require("body-parser");
+  * const body_parser = require("body-parser");
   * myapp.use(body_parser.urlencoded({ extended: false }));
   * myapp.use(body_parser.json());
 
