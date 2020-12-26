@@ -5,9 +5,9 @@ In This project requires I created an asynchronous web app that uses data from a
 
 ## Instructions
 - First, you must install dependencies (expressjs, cors, body-parser).
-    npm install express
-    npm install cors
-    npm install  body-parser
+    * npm install express
+    * npm install cors
+    * npm install  body-parser
 
 - Require dependencies in server.js.
 - Start an instance of express.
