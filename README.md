@@ -25,11 +25,11 @@ In This project requires I created an asynchronous web app that uses data from a
   * myapp.use(body_parser.json());
 
 - Define project folder name
- * myapp.use(express.static("your-project-folder-name"));
+  * myapp.use(express.static("your-project-folder-name"));
 
 - Server setup (port, listen to port) from terminal.
- * const port = 5000;
- * const server = myapp.listen(port, () => {
+  * const port = 5000;
+  * const server = myapp.listen(port, () => {
   console.log(`running on localhost: ${port}`);
 });
 - To run the server In terminal write ' node server.js '
