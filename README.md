@@ -13,9 +13,13 @@ This project requires you to create an asynchronous web app that uses Web API an
 - In browser write localhost:portnumber (replace port number with the port number you wrote in server.js)
 
 ## Features
+* generateButton function takes zip code from user input and sends a GET request to get city's weather
 * A GET route that returns project's data to the myData object in server code
+* getData function fetches weather data from the API
 * A POST route that adds incoming data to myData object.
+* dataPost function that posts user feelings input which we will get it with request coming from the api.
 * A Promise -using then-that makes a POST request to add the API data, as well as data entered by the user, to the app.
 * Another Promise that updates the UI dynamically.
+* update function that shows most recent entry data on the page.
 * Error handling with try { } catch { }
 * Debugging using console.log().
